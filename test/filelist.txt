@@ -1,0 +1,3 @@
+[
+    "/projects/tca_plugin_pmd_v7_13/test/src/EmptyControlStatement.java"
+]

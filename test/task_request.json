@@ -1,0 +1,48 @@
+{
+    "task_name": "DemoTool",
+    "module_name": "codelint",
+    "task_params": {
+        "scan_languages": [
+            "java"
+        ],
+        "pre_cmd": null,
+        "build_cmd": null,
+        "envs": "",
+        "incr_scan": false,
+        "rules": [
+            "category/java/codestyle.xml/EmptyControlStatement"
+        ],
+        "rule_list": [
+            {
+                "name": "category/java/codestyle.xml/EmptyControlStatement",
+                "gid": 25100,
+                "pkg_id": 111675,
+                "pkg_name": "profile[111460]\u81ea\u5b9a\u4e49\u89c4\u5219\u5305",
+                "pkg_type": 1,
+                "pkgmap_id": 13884568,
+                "tool_name": "tca_plugin_pmd_v7_13",
+                "category": 2,
+                "display_name": "BigIntegerInstantiation",
+                "rule_title": "Don't create instances of already existing BigInteger and BigDecimal (ZERO, ONE, TEN)",
+                "severity": 3,
+                "custom": false,
+                "language": [
+                    "java"
+                ],
+                "params": null
+            }
+        ],
+        "checktool": {
+            "display_name": "tca_plugin_pmd_v7_13"
+        },
+        "path_filters": {
+            "inclusion": [],
+            "exclusion": [],
+            "re_inclusion": [],
+            "re_exclusion": [
+            ]
+        },
+        "scm_type": "git"
+    },
+    "task_dir": "test/"
+  }
