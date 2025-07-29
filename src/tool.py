@@ -223,6 +223,16 @@ class Tool(object):
             with open(scan_files_env, "r") as rf:
                 scan_files = json.load(rf)
                 # print("[debug] files to scan: %s" % len(scan_files))
+
+        # 2025/7/28 过滤不规范文件名，比如包含逗号和空格的文件。
+        filted_scan_files = list()
+        for item in scan_files:
+            if any(char in item for char in [",", " "]):
+                print(f"[warn] The file name is not standardized and needs to be filtered: {item}")
+                continue
+            filted_scan_files.append(item)
+        scan_files = filted_scan_files
+
         tool_files_path = os.path.join(work_dir, "pmd_filelist.txt")
         with open(tool_files_path, "w") as rf:
             rf.write("\n".join(scan_files))
