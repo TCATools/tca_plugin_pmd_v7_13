@@ -230,6 +230,9 @@ class Tool(object):
             if any(char in item for char in [",", " "]):
                 print(f"[warn] The file name is not standardized and needs to be filtered: {item}")
                 continue
+            if item.endswith((".zip", ".tar.gz")):
+                print(f"[warn] This file is not a code file and is ignored: {item}")
+                continue
             filted_scan_files.append(item)
         scan_files = filted_scan_files
 
